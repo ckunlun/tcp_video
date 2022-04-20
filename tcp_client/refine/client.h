@@ -21,8 +21,11 @@ public:
 	string m_recv_buf;
 
 	bool initialization(const int& port, const string& ip, const VideoCapture& cap); // 初始化
+	bool initialization(const int& port, const string& ip); // 初始化
 	bool build_connect();
 	bool send_data();
 	bool receive_data();
+	bool send_data_frame(Mat input);
+	bool receive_data_frame(Mat& output);
 	bool free_connect();
 };
